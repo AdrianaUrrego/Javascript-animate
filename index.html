@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript element.animate</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 600px;
+            border: 1px solid red;
+        }
+        .pelota {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+        }
+        .btn {
+            text-align: center;
+            background: #7dc800;
+            padding: .6em .8em .8em;
+            border: none;
+            color: white;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: inset 0 -.2em rgba(0,0,0, .2);
+            outline: 0;
+            transition: .2s;
+            will-change: transform;
+        }
+        .btn:active {
+            transform: scale(.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pelota" id="pelota"></div> 
+        <div class="buttons">
+            <button class="btn" id="play">Play</button>
+            <button class="btn" id="pause">pause</button>
+            <button class="btn" id="stop">Stop</button>
+            <button class="btn" id="reverse">Reverse</button>
+        </div>
+    </div>
+    <script>
+        const $pelota = document.getElementById('pelota');
+        // elemnt.animate(keyframes = [], option = {})
+        const animation = $pelota.animate([
+            // from
+            {
+                transform: 'translateX(0)'
+            },
+            //to
+            {
+                transform: 'translateX(500px)'
+            }
+        ],{
+            //cuñanto queremos que dure la animación en milisegundos
+            duration: 1000,
+            //Cuánto debe esperar la animación en iniciar.
+            delay: 1000,
+            //La dirección que debe tomar la animación (tiene las mismas opciones que CSS)
+            direction: 'normal',
+            //Aceleración de la animación (tiene las mismas propiedades de CSS)
+            easing: 'linear',
+            //cuantas veces queremos que se repita la animación, en este caso si se quiere la opción infinita se debe llamar desde CSS, por esto debe empezar con mayúscula
+            iterations: Infinity,
+            //como debe finalizar la animación, en este caso queremos que continue haciendolo (son las mismas opciones que CSS)
+            fill: 'forwards',
+            //el iterationStart nos ayuda a configurar en donde se inicia la animación, este valor va de 0 a 1 en donde 1 es el 100%. Por ejemplo en este caso queremos mover el elemento $pelota del pixel 0 al pixel 500, si le ponemos .5 en est parámetro, no va a empezar en el pixel 0 sino ene l pixel 250.
+            iterationStart: .5,
+            //Tiempo en milisengundos que queremos que el elemento espere luego de que se acaba su animación.
+            // endDelay: 5000,
+        })
+
+        const $playButton = document.getElementById ('play');
+        const $pauseButton = document.getElementById ('pause');
+        const $stopButton = document.getElementById ('stop');
+        const $reverseButton = document.getElementById ('reverse');
+
+        $playButton.addEventListener('click', (event) => {
+            animation.play();
+        });
+        $pauseButton.addEventListener('click', (event) => {
+            animation.pause();
+        });
+        $stopButton.addEventListener('click', (event) => {
+            animation.cancel();
+        });
+        $reverseButton.addEventListener('click', (event) => {
+            animation.reverse();
+        });
+    </script>
+</body>
+</html>

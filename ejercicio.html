@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio animaciones Java Script</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5% 0;           
+        }
+        .circulo {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            color: white;
+            font-size: bold;
+            border-radius: 50%;
+            padding: 20px;
+            margin: 10px;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .buttons {
+            margin: 0 30%;
+        }
+        .btn {
+            text-align: center;
+            background: #53a9b8;
+            padding: 1em 1em 1em;
+            border: none;
+            color: white;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 25px;
+            cursor: pointer;
+            box-shadow: inset 0 -.2em rgba(0,0,0, .2);
+            outline: 0;
+            transition: .2s;
+            will-change: transform;
+        }
+        .btn:active {
+            transform: scale(.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circulo" id="circuloF">F</div>
+        <div class="circulo" id="circuloE">E</div>
+        <div class="circulo" id="circuloL">L</div>
+        <div class="circulo" id="circuloI">I</div>
+        <div class="circulo" id="circuloZ">Z</div>
+        <div class="circulo" id="circuloD">D</div>
+        <div class="circulo" id="circuloi">Í</div>
+        <div class="circulo" id="circuloA">A</div>
+        <div class="circulo" id="circuloC">:)</div>
+    </div>
+    <div class="buttons">
+        <button class="btn" id="play">Play</button>
+        <button class="btn" id="pause">pause</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="reverse">Reverse</button>
+    </div>
+    <script>
+        const $circuloF = document.getElementById ('circuloF');
+        const animation = $circuloF.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloE = document.getElementById ('circuloE');
+        const animation2 = $circuloE.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloL = document.getElementById ('circuloL');
+        const animation3 = $circuloL.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloI = document.getElementById ('circuloI');
+        const animation4 = $circuloI.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloZ = document.getElementById ('circuloZ');
+        const animation5 = $circuloZ.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloD = document.getElementById ('circuloD');
+        const animation6 = $circuloD.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloi = document.getElementById ('circuloi');
+        const animation7 = $circuloi.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloA = document.getElementById ('circuloA');
+        const animation8 = $circuloA.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+        const $circuloC = document.getElementById ('circuloC');
+        const animation9 = $circuloC.animate([
+            {
+                transform : 'rotateY(0deg)'
+            },
+            {
+                transform : 'rotateY(360deg)'
+            }
+        ],{
+            duration: 4000,
+            // delay: 1000,
+            direction: 'normal',
+            easing: 'linear',
+            iterations: Infinity,
+            fill: 'forwards',
+        })
+
+        const $playButton = document.getElementById ('play');
+        const $pauseButton = document.getElementById ('pause');
+        const $stopButton = document.getElementById ('stop');
+        const $reverseButton = document.getElementById ('reverse');
+
+        $playButton.addEventListener('click', (event) => {
+            animation.play();
+            animation2.play();
+            animation3.play();
+            animation4.play();
+            animation5.play();
+            animation6.play();
+            animation7.play();
+            animation8.play();
+            animation9.play();
+        });
+        $pauseButton.addEventListener('click', (event) => {
+            animation.pause();
+            animation2.pause();
+            animation3.pause();
+            animation4.pause();
+            animation5.pause();
+            animation6.pause();
+            animation7.pause();
+            animation8.pause();
+            animation9.pause();
+        });
+        $stopButton.addEventListener('click', (event) => {
+            animation.cancel();
+            animation2.cancel();
+            animation3.cancel();
+            animation4.cancel();
+            animation5.cancel();
+            animation6.cancel();
+            animation7.cancel();
+            animation8.cancel();
+            animation9.cancel();            
+        });
+        $reverseButton.addEventListener('click', (event) => {
+            animation.reverse();
+            animation2.reverse();
+            animation3.reverse();
+            animation4.reverse();
+            animation5.reverse();
+            animation6.reverse();
+            animation7.reverse();
+            animation8.reverse();
+            animation9.reverse();
+        });
+    </script>
+</body>
+</html>
